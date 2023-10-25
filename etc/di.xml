@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Abhinay\CustomApi\Api\BussinessRepositoryInterface" type="Abhinay\CustomApi\Model\Users"/>
+    <preference for="Abhinay\CustomApi\Api\Data\UserInterface" type="Abhinay\CustomApi\Model\Data\Users"/>
+    <preference for="Abhinay\CustomApi\Api\UpdateUserInterface" type="Abhinay\CustomApi\Model\UpdateUser"/>
+</config>

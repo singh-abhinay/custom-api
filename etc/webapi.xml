@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <route method="GET" url="/V1/bussiness/userslist">
+        <service class="Abhinay\CustomApi\Api\BussinessRepositoryInterface" method="getUsers"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route url="/V1/bussiness/users" method="POST">
+        <service class="Abhinay\CustomApi\Api\BussinessRepositoryInterface" method="setUsers"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route url="/V1/bussiness/updateusers" method="PUT">
+        <service class="Abhinay\CustomApi\Api\UpdateUserInterface" method="execute"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route method="GET" url="/V1/bussiness/usersdata/:id">
+        <service class="Abhinay\CustomApi\Api\BussinessRepositoryInterface" method="getBussinesById"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+</routes>
